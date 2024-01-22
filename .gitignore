@@ -1,7 +1,11 @@
 # compiled output
 /node_modules
 /prisma/migrations
-/src/mail
+# /src/mail
+.env
+/dist
+
+
 # Logs
 logs
 *.log
@@ -12,5 +16,3 @@ yarn-error.log*
 lerna-debug.log*
 
 
-.env
-/dist
