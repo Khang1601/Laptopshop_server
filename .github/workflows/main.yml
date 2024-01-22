@@ -20,7 +20,7 @@ jobs:
     - name: Kết nối ssh linux -> và pull
       uses: appleboy/ssh-action@master
       # uses: appleboy/ssh-action@main
-      with:
+      with: 
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         password: ${{ secrets.PASSWORD }}
