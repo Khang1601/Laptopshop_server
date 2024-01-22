@@ -4,7 +4,9 @@ name: Deploy
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    # branches: [ master ]
+    branches: [ main ]
+
  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,7 +18,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:       
     - name: Kết nối ssh linux -> và pull
-      uses: appleboy/ssh-action@master
+      # uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@main
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
