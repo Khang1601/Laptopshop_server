@@ -47,6 +47,7 @@ export default {
             })
 
             return res.status(status ? 200 : 213).send(status ? await ejs.renderFile(path.join(__dirname, "../templates/email.confirm.ejs"), { dataToken }) : "xác thực fail")
+            
         } catch (err) {
             console.log('err', err)
             return res.status(500).json({
